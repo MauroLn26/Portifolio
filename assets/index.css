@@ -1,0 +1,217 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(128, 128, 128, 0.308);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.header1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.links{
+    transition: 1s;
+    padding: 10px 20px 10px 20px;
+}
+
+.links:hover{
+    background-color: rgba(128, 128, 128, 0.521);
+}
+
+/* FIM DO HEADER */
+
+
+/* INICIO MAIN */
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    height: 80vh;
+    font-family: 'Josefin Sans', sans-serif;
+    font: 600;
+   
+}
+main p {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.562);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 5px;
+    line-height: 28px;
+}
+
+.main1 h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main1{
+    display: flex;
+    flex-direction: column;
+    margin-right: 300px;
+    width: 600px;
+
+}
+
+main img {
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px rgb(90, 89, 89);
+}
+
+.botao{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 10px 20px 10px 20px;
+    transition: 1s;
+}
+
+.botao:hover{
+    background-color: rgba(128, 128, 128, 0.521);
+}
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: black;
+    margin: 8px;
+}
+/* FIM DO MAIN */
+
+/* INICIO DO FOOTER */
+
+
+footer {
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgba(128, 128, 128, 0.308);
+    height: 10vh;
+}
+
+/* Responsividade */
+
+@media only screen and (max-width: 999px) {
+    main img{
+        display: none;
+    }
+
+    header{
+        font-size: 100%;
+    
+    }
+
+    main, .main1{
+        font-size: calc(1em + 1vw);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        margin: auto;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    ul li a{
+        color: white;
+    }
+    
+    body{
+        overflow-x: hidden;
+        text-align: center;
+    }
+   
+    .nav-list{
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 100vw;
+        height: 80vh;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+        
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+}
+
+.nav-list.active{
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
